@@ -20,3 +20,14 @@ for e in data :
 		new.append(e)
 print('有', len(new), '筆留言少於100字')
 print(new[0])
+
+good_words = []
+for e in data :
+	if 'good' in e :
+		good_words.append(e)
+print('留言中有出現good筆數共', len(good_words), '筆留言')
+
+#清單快寫法
+good = [e for e in data if 'good' in e]
+
+bad = ['bad' in d for d in data ]
